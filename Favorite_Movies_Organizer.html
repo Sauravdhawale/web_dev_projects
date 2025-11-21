@@ -152,8 +152,8 @@
         // }
 
         function searchMovie() {
-            let searchInput = document.getElementById("name").value.trim();
-            let index = favorite_movies.findIndex(movie => movie === searchInput);
+            let searchInput = document.getElementById("name").value.trim().toLowerCase();
+            let index = favorite_movies.findIndex(movie => movie.toLowerCase() === searchInput);
             if (searchInput) {
                 if (index !== -1) {
                     // favorite_movies[index].style.color = "red";
